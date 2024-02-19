@@ -1,0 +1,33 @@
+{
+    "usuario": {
+      "id": 1,
+      "nombre": "Pancho Flores",
+      "correo": "pancho@gmail.com",
+      "contrasena": "panchoflores87"
+    },
+    "lampara": {
+      "id": 1,
+      "nombre": "IntelligentLamp",
+      "estado": "encendida",
+      "color_actual": "blanco"
+    },
+    "lamparaApagada": {
+        "id": 1,
+        "nombre": "IntelligentLamp",
+        "estado": "apagada",
+        "color_actual": "negro"
+      },
+    "clima": {
+      "temperatura": 25,
+      "humedad": 50,
+      "condiciones": "soleado",
+      "recomendaciones": "Usar bloqueador"
+    },
+    "alarma": {
+      "id": 1,
+      "hora": "08:00",
+      "dias_semana": ["lunes","miércoles", "jueves", "viernes", "sabado"],
+      "activo": true
+    }
+}
+  
