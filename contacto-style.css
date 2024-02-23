@@ -1,6 +1,23 @@
-/* Estilos específicos para la sección Contacto */
 #contacto {
-    background-color: #d0e3f1;
+    background-color: #ead6c9;
     color: #333;
-    /* Agrega estilos adicionales según tus preferencias */
+    text-align: center;
+    font-family: 'The Seasons Light', 'Cormorant', serif;
+}
+
+.contacto-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.contacto-info {
+    text-align: center;
+    margin-bottom: 10px; 
+}
+
+.contacto-info img {
+    width: 50px;
+    margin-bottom: 10px;
 }

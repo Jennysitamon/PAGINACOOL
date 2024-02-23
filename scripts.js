@@ -23,7 +23,6 @@ function obtenerInfoClima() {
                     const temperatura = data.main.temp; // Temperatura en Kelvin
                     const descripcion = data.weather[0].description; // Descripción del clima
 
-                    // Actualizar los elementos HTML con la información del clima
                     document.querySelector('.weather-temp').textContent = `${Math.round(temperatura - 273.15)}°C`;
                     document.querySelector('.day-temp').textContent = `${Math.round(temperatura - 273.15)}°C`;
                     document.querySelector('.weather-desc').textContent = descripcion;
@@ -38,10 +37,8 @@ function obtenerInfoClima() {
     }
 }
 
-// Llamar a la función para obtener la información del clima al cargar la página
 window.onload = function() {
     obtenerInfoClima();
 
-    // Inicializar Feather Icons después de cargar el contenido
     feather.replace();
 };

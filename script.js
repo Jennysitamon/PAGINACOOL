@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function () {
         nav.classList.toggle('active');
     });
 
-    // Agrega la clase 'animate' cuando se carga la página
     document.body.onload = function () {
         intelligentLamp.classList.add('animate');
         const intelligent = document.querySelector('#inicio .intelligent');
@@ -15,4 +14,25 @@ document.addEventListener('DOMContentLoaded', function () {
         intelligent.classList.add('animate');
         lamp.classList.add('animate');
     };
+
+    const iconImages = document.querySelectorAll('.icon-container img');
+    iconImages.forEach(icon => {
+        icon.addEventListener('mouseover', function () {
+            icon.style.transform = 'scale(1.5)';
+        });
+
+        icon.addEventListener('mouseout', function () {
+            icon.style.transform = 'scale(1)';
+        });
+    });
+
+    intelligentLamp.addEventListener('mouseover', function () {
+        intelligentLamp.style.color = '#EDD4D2'; 
+        intelligentLamp.style.transform = 'translateY(-3px)'; /* Agrega un ligero desplazamiento hacia arriba */
+    });
+
+    intelligentLamp.addEventListener('mouseout', function () {
+        intelligentLamp.style.color = '#fff'; 
+        intelligentLamp.style.transform = 'translateY(0)'; /* Restaura el desplazamiento original */
+    });
 });

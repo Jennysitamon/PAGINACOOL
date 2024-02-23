@@ -1,29 +1,28 @@
-/* Importa la fuente Didot */
 @import url('https://fonts.googleapis.com/css2?family=Didot&display=swap');
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Didot', serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 header {
-    background-color: #e0bfbf;
-    color: #fff;
-    padding: 2px;
+    background-color: #f0ddd0;
+    padding: 10px 20px; /* Ajusta el padding para hacer la barra más delgada */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed; /* Cambiado a posición fija */
+    position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1000; /* Asegura que esté en la parte superior */
+    z-index: 1000;
 }
 
 #logo {
-    max-height: 100px;
-    max-width: 200%;
+    height: 80px; /* Ajusta la altura del logo para hacerlo más grande */
+    width: auto;
+    max-width: 100%;
 }
 
 nav ul {
@@ -37,24 +36,37 @@ nav ul li {
     margin-right: 20px;
 }
 
+
 nav ul li a {
     text-decoration: none;
-    color: #fff; /* Texto blanco en la barra de navegación */
-    font-weight: bold;
-    font-size: 18px;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #e0bfbf;
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    color: #a18422;
+    font-size: 16px;
+    padding: 8px 10px;
+    border-radius: 0; /* Quita el borde redondeado */
+    border-bottom: 2px solid transparent; /* Agrega una línea inferior transparente */
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
 }
 
 nav ul li a:hover {
-    background-color: #8B4513;
-    color: #fff;
+    background-color: #EDD4D2;
+    color: #b38c22;
+    border-bottom: 2px solid #fff; /* Agrega una línea inferior blanca al pasar el mouse */
 }
 
+#inicio .titles {
+    display: inline-block;
+    cursor: pointer; /* Cambia el cursor al pasar sobre los títulos */
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+#inicio .titles:hover {
+    color: #ead6c9; /* Cambia el color al pasar el mouse */
+    transform: translateY(-3px); /* Agrega un ligero desplazamiento hacia arriba */
+}
+
+
 #inicio {
-    margin-top: 80px; /* Espacio para la barra de navegación fija */
+    margin-top: 80px;
     text-align: center;
     background-image: url("images/lamp1.png");
     background-size: 100% 100%;
@@ -73,7 +85,7 @@ nav ul li a:hover {
 
 #inicio .intelligent,
 #inicio .lamp {
-    font-family: 'Didot', serif;
+    font-family: 'The Seasons Light', 'Cormorant', serif;
     font-size: 70px;
     display: block;
     opacity: 0;
@@ -81,7 +93,6 @@ nav ul li a:hover {
     transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
 }
 
-/* Media query para pantallas más pequeñas (menos de 600px) */
 @media screen and (max-width: 600px) {
     header {
         flex-direction: column;
@@ -116,7 +127,6 @@ nav ul li a:hover {
     }
 }
 
-/* Ocultar el ícono de menú en pantallas más grandes */
 @media screen and (min-width: 601px) {
     #menu-icon {
         display: none;
@@ -127,4 +137,36 @@ nav ul li a:hover {
 #inicio .lamp.animate {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Agregado estilo para el contenedor de contacto */
+#contacto {
+    background-color: #ead6c9;
+    color: #333;
+    padding: 20px;
+}
+
+.contacto-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contacto-info {
+    text-align: center;
+}
+
+.contacto-info img {
+    width: 50px;
+}
+
+.contacto-info h3 {
+    font-family: 'The Seasons Light', 'Cormorant', serif;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+/* Estilo para centrar el contenido del contacto */
+#contacto h2 {
+    text-align: center;
 }
